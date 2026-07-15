@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamroh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="profile">
+    <img src="https://via.placeholder.com/100" id="avatar">
+
+    <input type="file" id="avatarInput" accept="image/*">
+    <button onclick="uploadAvatar()">Avatarni yuklash</button>
+
+    <h2 id="username">Foydalanuvchi</h2>
+    <p id="status">Online</p>
+    <button onclick="editProfile()">Profilni o'zgartirish</button>
+</div>
+
+<h1>Hamroh</h1>
+<p>Xush kelibsiz!</p>
+
+<div class="post-box">
+    <textarea id="postText" placeholder="Nima o'ylayapsiz?"></textarea>
+    <br>
+  <input type="file" id="postImage" accept="image/*">
+    <button onclick="addPost()">Post joylash</button>
+</div>
+
+<div id="posts"></div>
+
+<br>
+
+<button onclick="window.location.href='login.html'">Boshlash</button>
+
+<script>
+function editProfile() {
+    let name = prompt("Ismingizni kiriting:");
+    if (name) {
+        document.getElementById("username").innerHTML = name;
+    }
+}
+</script>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
